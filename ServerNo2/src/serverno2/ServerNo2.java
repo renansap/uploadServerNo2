@@ -28,7 +28,7 @@ public class ServerNo2 {
 
         try {
             serverSocket = new ServerSocket(4002);
-            System.out.println("Subiu o servidor 4004");
+            System.out.println("Subiu o servidor 4002");
         } catch (IOException ex) {
             System.out.println("Can't setup server on this port number. ");
         }
@@ -50,10 +50,8 @@ public class ServerNo2 {
         }
 
         try {
-            out = new FileOutputStream("C:\\Users\\Ksa\\Documents\\NetBeansProjects\\MortalKombat2\\uploadServerNo1\\src\\arquivos\\novo.txt");
-        } catch (FileNotFoundException ex) {
-            System.out.println("File not found. ");
-        }
+            out = new FileOutputStream("C:\\Users\\Ksa\\Documents\\NetBeansProjects\\uploadServerNo1\\src\\arquivos\\novo2.txt");
+        
 
         byte[] bytes = new byte[16 * 1024];
 
@@ -67,6 +65,9 @@ public class ServerNo2 {
         socket.close();
         serverSocket.close();
         // TODO code application logic here
+        } catch (FileNotFoundException ex) {
+            System.out.println("File not found. ");
+        }
     }
     
 }
