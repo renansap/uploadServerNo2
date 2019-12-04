@@ -25,6 +25,8 @@ public class ServerNo2 {
     public static void main(String[] args) throws IOException {
 
         ServerSocket serverSocket = null;
+        
+        String caminho = "C:\\Users\\Ksa\\Documents\\NetBeansProjects\\uploadServerNo2\\ServerNo2\\src\\arquivos\\";
 
         try {
             serverSocket = new ServerSocket(4002);
@@ -50,7 +52,7 @@ public class ServerNo2 {
         }
 
         try {
-            out = new FileOutputStream("C:\\Users\\Ksa\\Documents\\NetBeansProjects\\uploadServerNo1\\src\\arquivos\\novo2.txt");
+            out = new FileOutputStream(caminho+"novo2.txt");
             System.out.println("Arquivo Copiando SeverNo2");
 
             byte[] bytes = new byte[16 * 1024];
